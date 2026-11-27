@@ -16,40 +16,40 @@ return Scaffold(
             Expanded(child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('7'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('8'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('9'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('/'))),
+                BotonCalc('7'),
+                BotonCalc('8'),
+                BotonCalc('9'),
+                BotonCalc('/'),
               ],
             )),
             //linea 2
             Expanded(child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('4'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('5'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('6'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('x'))),
+                BotonCalc('4'),
+                BotonCalc('5'),
+                BotonCalc('6'),
+                BotonCalc('x'),
               ],
             )),
             //linea 3
             Expanded(child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('1'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('2'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('3'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('-'))),
+                BotonCalc('1'),
+                BotonCalc('2'),
+                BotonCalc('3'),
+                BotonCalc('-'),
               ],
             )),
             //linea 4
             Expanded(child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('0'))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text(','))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('='))),
-                Expanded(child: ElevatedButton(onPressed: () {}, child: Text('+'))),
+                BotonCalc('0'),
+                BotonCalc(','),
+                BotonCalc('='),
+                BotonCalc('+'),
               ],
             )),
           ],
@@ -59,6 +59,9 @@ return Scaffold(
     ],
   ),
 );
+  }
+  Widget BotonCalc(String text) {
+    return Expanded( child: ElevatedButton( onPressed: () {}, child: Text(text)));
   }
 }
 
