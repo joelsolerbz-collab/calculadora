@@ -6,10 +6,19 @@ class PantallaCalculadora extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Calculadora', style: TextStyle(fontSize: 32)), //prueba de texto para ver que funciona la pantalla
+ return Scaffold(
+  body: Column(
+    children: [
+      Expanded(child: Text('Pantalla')),
+      Row(
+        children: [
+          Expanded(child: ElevatedButton(onPressed: () {}, child: Text('7'))), //flex sirve para dar proporción de espacio a los widgets hijos
+          Expanded(child: ElevatedButton(onPressed: () {}, child: Text('8'))),
+          Expanded(child: ElevatedButton(onPressed: () {}, child: Text('9'))),
+        ],
       ),
-    );
+    ],
+  ),
+);
   }
 }
